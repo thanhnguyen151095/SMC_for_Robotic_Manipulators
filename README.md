@@ -43,7 +43,7 @@ $$
 
 for any $x \in {\mathbb{R}^{n \times 1}}$. 
 
-This research aims to develop a novel control law, denoted as $\tau$, characterized by minimized chattering behavior. This control law is intended to regulate the joint position of the robot arm, ensuring both swift and precise tracking of the desired position.
+This research aims to design an SMC law, denoted as $\tau$, characterized by minimized chattering behavior. This control law is intended to regulate the joint position of the robot arm, ensuring both swift and precise tracking of the desired position.
 
 # Design of SMC
 

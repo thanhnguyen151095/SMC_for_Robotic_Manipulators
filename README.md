@@ -29,7 +29,9 @@ where $\Sigma = -\Delta {\mathcal H}(q)q - \Delta \mathcal G(q )-\Delta \mathcal
 
 Property 1: The inertia matrix $\mathcal H _0(q)$ is positive and symmetric, and is bounded as:
 
-$$0<\lambda_{min}({\mathcal H _0}(q))  \le \left\|  {\mathcal H _0}(q)\right\|\le \lambda_{max}( {\mathcal H _0}(q))$$
+$$
+0 < \lambda_{min}(H_0(q))  \le |H_0(q)| \le \lambda_{max}(H_0(q))
+$$
 
 where $\lambda_{max}({H_0}(q))$ and  $\lambda_{min}({H_0}(q))$  denote the maximum and minimum eigenvalues of ${\mathcal H}_0(q)$. 
 

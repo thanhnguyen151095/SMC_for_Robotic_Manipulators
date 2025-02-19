@@ -3,7 +3,7 @@ Sliding Mode Control for Robotic Manipulators
 # Introduction
 Robotic manipulators are extensively utilized across diverse fields, spanning from industrial plants and medical treatment to military operations, education, and space exploration. Their versatility not only enhances productivity and product quality but also mitigates risks in hazardous environments, reducing potential harm to human workers. Consequently, ensuring robust trajectory tracking performance and maintaining high stability in robotic arms become crucial. However, due to their complexity as highly interconnected systems with multiple inputs and outputs, robots often face challenges in maintaining performance amidst external uncertainties and disturbances. As a result, designing controllers capable of ensuring precise trajectory tracking remains a significant ongoing research focus.
 
-Several control strategies have been developed to address the trajectory tracking challenge in robots, such as computed torque control, PID, SMC, and adaptive control. SMC is notable for its simplicity and robustness against uncertainties and disturbances, gaining considerable attention in recent years.
+Several control strategies have been developed to address the trajectory tracking challenge in robots, such as computed torque control, PID, SMC, and adaptive control. Among them, SMC is notable for its simplicity and robustness against uncertainties and disturbances, gaining considerable attention in recent years.
 
 # Problem Formulation
 ## Robot System Description

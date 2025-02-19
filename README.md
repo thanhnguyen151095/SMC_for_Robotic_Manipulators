@@ -29,11 +29,9 @@ where $\Sigma = -\Delta {\mathcal H}(q)q - \Delta \mathcal G(q )-\Delta \mathcal
 
 Property 1: The inertia matrix $\mathcal H _0(q)$ is positive and symmetric, and is bounded as:
 
-$$
-0<\lambda_{min}( {\mathcal H _0}(q))  \le\left\|  {\mathcal H _0}(q)\right\|\le \lambda_{max}( {\mathcal H _0}(q))
-$$
+$$0<\lambda_{min}({\mathcal H _0}(q))  \le \left\|  {\mathcal H _0}(q)\right\|\le \lambda_{max}( {\mathcal H _0}(q))$$
 
-where $\lambda_{max}( {\mathcal H _0}(q))$ and  $\lambda_{min}( {\mathcal H _0}(q)) $  denote the maximum and minimum eigenvalues of ${\mathcal H}_0(q)$. 
+where $\lambda_{\max}( {\mathcal H _0}(q))$ and  $\lambda_{\min}( {\mathcal H _0}(q))$  denote the maximum and minimum eigenvalues of ${\mathcal H}_0(q)$. 
 
 Property 2: The passivity property of the robotic manipulator can be described as:
 
@@ -42,3 +40,14 @@ x^T (\dot{ {\mathcal H _0}}(q) - 2{\mathcal Q _0}(q ,\dot q ))x=0
 $$
 
 for any $x \in {\mathbb{R}^{n \times 1}}$. 
+
+This research aims to develop a novel control law, denoted as $\tau$, characterized by minimized chattering behavior. This control law is intended to regulate the joint position of the robot arm, ensuring both swift and precise tracking of the desired position.
+
+# Design of SMC
+
+# Simulation Results and Discussions
+
+# Conclusion
+
+# References
+

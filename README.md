@@ -31,7 +31,7 @@ Property 1: The inertia matrix $\mathcal H _0(q)$ is positive and symmetric, and
 
 $$0<\lambda_{min}({\mathcal H _0}(q))  \le \left\|  {\mathcal H _0}(q)\right\|\le \lambda_{max}( {\mathcal H _0}(q))$$
 
-where $\lambda_{\max}( {\mathcal H _0}(q))$ and  $\lambda_{\min}( {\mathcal H _0}(q))$  denote the maximum and minimum eigenvalues of ${\mathcal H}_0(q)$. 
+where $\lambda_{max}({H_0}(q))$ and  $\lambda_{min}({H_0}(q))$  denote the maximum and minimum eigenvalues of ${\mathcal H}_0(q)$. 
 
 Property 2: The passivity property of the robotic manipulator can be described as:
 

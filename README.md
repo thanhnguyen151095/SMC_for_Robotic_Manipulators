@@ -61,6 +61,9 @@ $$
 s = \dot{e} + c e
 $$
 
+where $c$ denotes a positive constant.
+
+
 
 
 

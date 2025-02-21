@@ -47,6 +47,23 @@ This research aims to design an SMC law, denoted as $\tau$, characterized by min
 
 # Design of SMC
 
+The position and velocity tracking errors are defined as follows:
+
+$$
+e = q - q_{d}; \quad \dot{e} = \dot{q} - \dot{q}_d
+$$
+
+where $q_d$ and $\dot{q}_d$ are desired position and velocity, respectively.
+
+Then, we can design the sliding mode surface as:
+
+$$
+s = \dot{e} + c e
+$$
+
+
+
+
 # Simulation Results and Discussions
 
 # Conclusion

@@ -22,7 +22,7 @@ The vector $\tau\in {\mathbb{R}^{n \times 1}}$ corresponds to the control input 
 Eq. (1) can be reformulated as:
 
 $$
-\ddot q =    {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma )
+\ddot q =    {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) \quad\quad (2)
 $$
 
 where $\Sigma = -\Delta {\mathcal H}(q)q - \Delta \mathcal G(q )-\Delta \mathcal Q(q,\dot q )\dot q - \mathcal F(\dot q )  - \tau _D \in {\mathbb{R}^{n \times 1}}$ encapsulates all uncertainties and external disturbances, and is bounded by $\left\| \Sigma  \right\| \le {\bar \Sigma}$.
@@ -30,7 +30,7 @@ where $\Sigma = -\Delta {\mathcal H}(q)q - \Delta \mathcal G(q )-\Delta \mathcal
 Property 1: The inertia matrix $\mathcal H _0(q)$ is positive and symmetric, and is bounded as:
 
 $$
-0 < \lambda_{min}(H_0(q))  \le |H_0(q)| \le \lambda_{max}(H_0(q))
+0 < \lambda_{min}(H_0(q))  \le |H_0(q)| \le \lambda_{max}(H_0(q)) \quad\quad (3)
 $$
 
 where $\lambda_{max}({H_0}(q))$ and  $\lambda_{min}({H_0}(q))$  denote the maximum and minimum eigenvalues of ${\mathcal H}_0(q)$. 
@@ -38,7 +38,7 @@ where $\lambda_{max}({H_0}(q))$ and  $\lambda_{min}({H_0}(q))$  denote the maxim
 Property 2: The passivity property of the robotic manipulator can be described as:
 
 $$
-x^T (\dot{ {\mathcal H _0}}(q) - 2{\mathcal Q _0}(q ,\dot q ))x=0
+x^T (\dot{ {\mathcal H _0}}(q) - 2{\mathcal Q _0}(q ,\dot q ))x=0 \quad\quad (4)
 $$
 
 for any $x \in {\mathbb{R}^{n \times 1}}$. 
@@ -47,21 +47,23 @@ This research aims to design an SMC law, denoted as $\tau$, characterized by min
 
 # Design of SMC
 
-The position and velocity tracking errors are defined as follows:
+The tracking errors for position and velocity are defined as follows:
 
 $$
-e = q - q_{d}; \quad \dot{e} = \dot{q} - \dot{q}_d
+e = q - q_{d}; \quad \dot{e} = \dot{q} - \dot{q}_d \quad\quad (5)
 $$
 
-where $q_d$ and $\dot{q}_d$ are desired position and velocity, respectively.
+Here, $q_d$ and $\dot{q}_d$ represent the desired position and velocity, respectively.
 
-Then, we can design the sliding mode surface as:
+Next, we can establish the sliding mode surface as:
 
 $$
-s = \dot{e} + c e
+s = \dot{e} + c e \quad\quad (6)
 $$
 
-where $c$ denotes a positive constant.
+In this equation, $c$ is a positive constant.
+
+
 
 
 

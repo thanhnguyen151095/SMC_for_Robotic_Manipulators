@@ -63,6 +63,16 @@ $$
 
 In this equation, $c$ is a positive constant.
 
+Taking the time derivative of the sliding mode surface in Eq. (6) and using the system model in Eq. (2), We obtain:
+
+$$
+\begin{aligned}
+\dot{s} &= \ddot{e} + c \dot{e} \quad\quad (6)\\
+&= \ddot{q} - \ddot{q}_d + c \dot{e} \\
+&= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e} \\
+\end{aligned}
+$$
+
 
 
 

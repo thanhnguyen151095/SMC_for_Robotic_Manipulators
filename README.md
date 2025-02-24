@@ -67,7 +67,7 @@ Taking the time derivative of the sliding mode surface in Eq. (6) and using the 
 
 $$
 \begin{aligned}
-\dot{s} &= \ddot{e} + c \dot{e} \quad\quad\quad\quad\quad (7)\\
+\dot{s} &= \ddot{e} + c \dot{e} \quad\quad\quad\quad\quad\quad\quad (7)\\
 &= \ddot{q} - \ddot{q}_d + c \dot{e} \\
 &= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e} \\
 \end{aligned}
@@ -77,11 +77,23 @@ To design the control law, we first select a Lyapunov function as $V=0.5s^T s$, 
 
 $$
 \begin{aligned}
-\dot{V} &= s^T \dot{s} \quad\quad\quad\quad\quad (7)\\
-&= s^T \left ( \right) \\
-&= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e} \\
+\dot{V} &= s^T \dot{s} \quad\quad\quad\quad\quad\quad\quad (8)\\
+&= s^T \left ( {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e}\right) \\
 \end{aligned}
 $$
+
+To ensure the stability of the control system, $V\ge0$ and $\dot{V}\le0$. Therefore, the control law can be designed based on Eq. (8) as follows:
+
+$$
+\tau=   {\mathcal H _0}(q)(\ddot{q}_d - c \dot{e} - K s - \bar{\Sigma} \text{sign}(s) ) + {\mathcal Q _0}(q ,\dot q )\dot q + {\mathcal G _0}(q ) \quad\quad\quad (9)
+$$
+
+To reduce chattering in the control signals, we can replace the $\text{sat}(.)$ to $\text{sign}(.)$ in Eq. (9) as follows:
+
+$$
+sat(s)=   {\mathcal H _0}(q)(\ddot{q}_d - c \dot{e} - K s - \bar{\Sigma} \text{sign}(s) ) + {\mathcal Q _0}(q ,\dot q )\dot q + {\mathcal G _0}(q ) \quad\quad\quad (9)
+$$
+
 
 
 

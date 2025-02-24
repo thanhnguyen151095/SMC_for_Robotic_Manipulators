@@ -67,13 +67,21 @@ Taking the time derivative of the sliding mode surface in Eq. (6) and using the 
 
 $$
 \begin{aligned}
-\dot{s} &= \ddot{e} + c \dot{e} \quad\quad (6)\\
+\dot{s} &= \ddot{e} + c \dot{e} \quad\quad\quad\quad\quad (7)\\
 &= \ddot{q} - \ddot{q}_d + c \dot{e} \\
 &= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e} \\
 \end{aligned}
 $$
 
+To design the control law, we first select a Lyapunov function as $V=0.5s^T s$, then its time derivative can be given as:
 
+$$
+\begin{aligned}
+\dot{V} &= s^T \dot{s} \quad\quad\quad\quad\quad (7)\\
+&= s^T \left ( \right) \\
+&= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e} \\
+\end{aligned}
+$$
 
 
 

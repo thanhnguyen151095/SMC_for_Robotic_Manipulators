@@ -102,6 +102,7 @@ $$
 # Simulation Results and Discussions
 
 To verify the effectiveness of the SMC method, comprehensive simulations were conducted using the SAMSUNG FARA AT2 robot manipulator. This advanced robotic system was chosen due to its precision and reliability in various industrial applications. The performance of the SMC was rigorously compared to the well-established Computed Torque Control (CTC) method. By analyzing key performance metrics such as tracking accuracy, robustness to disturbances, and computational efficiency, the superiority of the SMC approach is highlighted. This comparison aims to provide a clear demonstration of the advantages offered by SMC in enhancing the control and stability of robotic manipulators.
+<img src="Figures/3DOF.jpg" alt="Description" width="800">
 
 
 

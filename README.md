@@ -22,10 +22,10 @@ The vector $\tau\in {\mathbb{R}^{n \times 1}}$ corresponds to the control input 
 Eq. (1) can be reformulated as:
 
 $$
-\ddot q =    {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) \quad\quad (2)
+\ddot q =    {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau  ) + \Sigma \quad\quad (2)
 $$
 
-where $\Sigma = -\Delta {\mathcal H}(q)q - \Delta \mathcal G(q )-\Delta \mathcal Q(q,\dot q )\dot q - \mathcal F(\dot q )  - \tau _D \in {\mathbb{R}^{n \times 1}}$ encapsulates all uncertainties and external disturbances, and is bounded by $\left\| \Sigma  \right\| \le {\bar \Sigma}$.
+where $\Sigma = {\mathcal H _0}^{-1}(q)(-\Delta {\mathcal H}(q)q - \Delta \mathcal G(q )-\Delta \mathcal Q(q,\dot q )\dot q - \mathcal F(\dot q )  - \tau _D) \in {\mathbb{R}^{n \times 1}}$ encapsulates all uncertainties and external disturbances, and is bounded by $\left\| \Sigma  \right\| \le {\bar \Sigma}$.
 
 Property 1: The inertia matrix $\mathcal H _0(q)$ is positive and symmetric, and is bounded as:
 
@@ -69,7 +69,7 @@ $$
 \begin{aligned}
 \dot{s} &= \ddot{e} + c \dot{e} \quad\quad\quad\quad\quad\quad\quad (7)\\
 &= \ddot{q} - \ddot{q}_d + c \dot{e} \\
-&= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e} \\
+&= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau  ) + \Sigma - \ddot{q}_d + c \dot{e} \\
 \end{aligned}
 $$
 
@@ -78,7 +78,7 @@ To design the control law, we first select a Lyapunov function as $V=0.5s^T s$, 
 $$
 \begin{aligned}
 \dot{V} &= s^T \dot{s} \quad\quad\quad\quad\quad\quad\quad (8)\\
-&= s^T \left ( {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau + \Sigma ) - \ddot{q}_d + c \dot{e}\right) \\
+&= s^T \left ( {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau  ) + \Sigma - \ddot{q}_d + c \dot{e}\right) \\
 \end{aligned}
 $$
 
@@ -91,10 +91,8 @@ $$
 To reduce chattering in the control signals, we can replace the $\text{sat}(.)$ to $\text{sign}(.)$ in Eq. (9) as follows:
 
 $$
-sat(s)=   {\mathcal H _0}(q)(\ddot{q}_d - c \dot{e} - K s - \bar{\Sigma} \text{sign}(s) ) + {\mathcal Q _0}(q ,\dot q )\dot q + {\mathcal G _0}(q ) \quad\quad\quad (9)
+sat(s)=   {\mathcal H _0}(q)(\ddot{q}_d - c \dot{e} - K s - \bar{\Sigma} \text{sign}(s) ) + {\mathcal Q _0}(q ,\dot q )\dot q + {\mathcal G _0}(q ) \quad\quad\quad (10)
 $$
-
-
 
 
 

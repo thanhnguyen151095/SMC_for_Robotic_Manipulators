@@ -67,19 +67,21 @@ Taking the time derivative of the sliding mode surface in Eq. (6) and using the 
 
 $$
 \begin{aligned}
-\dot{s} &= \ddot{e} + c \dot{e} \quad\quad\quad\quad\quad\quad\quad (7)\\
+\dot{s} &= \ddot{e} + c \dot{e} \\
 &= \ddot{q} - \ddot{q}_d + c \dot{e} \\
-&= {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau  ) + \Sigma - \ddot{q}_d + c \dot{e} \\
+&= \mathcal{H}_0^{-1}(q) \left( -\mathcal{Q}_0(q, \dot{q}) \dot{q} - \mathcal{G}_0(q) + \tau \right) + \Sigma - \ddot{q}_d + c \dot{e}
 \end{aligned}
+\quad\quad\quad (7)
 $$
 
 To design the control law, we first select a Lyapunov function as $V=0.5s^T s$, then its time derivative can be given as:
 
 $$
 \begin{aligned}
-\dot{V} &= s^T \dot{s} \quad\quad\quad\quad\quad\quad\quad (8)\\
-&= s^T \left ( {\mathcal H _0}^{-1}(q)(- {\mathcal Q _0}(q ,\dot q )\dot q - {\mathcal G _0}(q ) + \tau  ) + \Sigma - \ddot{q}_d + c \dot{e}\right) \\
+\dot{V} &= s^T \dot{s} \\
+&= s^T \left( \mathcal{H}_0^{-1}(q) \left( -\mathcal{Q}_0(q, \dot{q}) \dot{q} - \mathcal{G}_0(q) + \tau \right) + \Sigma - \ddot{q}_d + c \dot{e} \right)
 \end{aligned}
+\quad\quad\quad (8)
 $$
 
 To ensure the stability of the control system, $V\ge0$ and $\dot{V}\le0$. Therefore, the control law can be designed based on Eq. (8) as follows:
@@ -91,13 +93,17 @@ $$
 To reduce chattering in the control signals, we can replace the $\text{sat}(.)$ to $\text{sign}(.)$ in Eq. (9) as follows:
 
 $$
-sat(s)=   {\mathcal H _0}(q)(\ddot{q}_d - c \dot{e} - K s - \bar{\Sigma} \text{sign}(s) ) + {\mathcal Q _0}(q ,\dot q )\dot q + {\mathcal G _0}(q ) \quad\quad\quad (10)
+\text{sat}(s_i) = \begin{cases} 
+\text{sign}(s_i) & \text{if } |s_i| \ge \gamma \\
+\frac{s_i}{\gamma} & \text{if } |s_i| < \gamma 
+\end{cases} \quad\quad\quad (10)
 $$
 
-
-
-
 # Simulation Results and Discussions
+
+To verify the effectiveness of the SMC method, comprehensive simulations were conducted using the SAMSUNG FARA AT2 robot manipulator. This advanced robotic system was chosen due to its precision and reliability in various industrial applications. The performance of the SMC was rigorously compared to the well-established Computed Torque Control (CTC) method. By analyzing key performance metrics such as tracking accuracy, robustness to disturbances, and computational efficiency, the superiority of the SMC approach is highlighted. This comparison aims to provide a clear demonstration of the advantages offered by SMC in enhancing the control and stability of robotic manipulators.
+
+
 
 # Conclusion
 

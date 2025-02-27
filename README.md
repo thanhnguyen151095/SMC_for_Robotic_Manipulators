@@ -110,7 +110,9 @@ To verify the effectiveness of the SMC method, comprehensive simulations were co
 <img src="Figures/trackingerror.png" alt="Description" width="800">|
 <img src="Figures/Controlinput.png" alt="Description" width="800">|
 
+Examining the simulation results, it is evident that SMC offers superior tracking performance compared to CTC due to its robustness against uncertaities and external noise. Specifically, SMC demonstrates greater tracking accuracy than CTC.
 
+By utilizing the sat() function instead of the sign() function, the control signal of SMC becomes noticeably smoother.
 
 # Conclusion
 

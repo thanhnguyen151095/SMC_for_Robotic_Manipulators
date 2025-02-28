@@ -118,4 +118,6 @@ By utilizing the sat() function instead of the sign() function, the control sign
 # Conclusion
 
 # References
+1. https://scholar.google.com/citations?user=Mc76hQoAAAAJ&hl=en
+
 

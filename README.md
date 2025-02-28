@@ -106,9 +106,10 @@ To verify the effectiveness of the SMC method, comprehensive simulations were co
 
 |_|
 |:---:|
+<img src="Figures/xyztracking.png" alt="Description" width="800">|
 <img src="Figures/tracking.png" alt="Description" width="800">|
 <img src="Figures/trackingerror.png" alt="Description" width="800">|
-<img src="Figures/Controlinput.png" alt="Description" width="800">|
+<img src="Figures/controlinput.png" alt="Description" width="800">|
 
 Examining the simulation results, it is evident that SMC offers superior tracking performance compared to CTC due to its robustness against uncertaities and external noise. Specifically, SMC demonstrates greater tracking accuracy than CTC.
 
